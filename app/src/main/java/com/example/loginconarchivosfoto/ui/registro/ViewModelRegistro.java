@@ -24,13 +24,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.Serializable;
 
 public class ViewModelRegistro extends AndroidViewModel {
 
     private MutableLiveData<Usuario> usuario;
     private MutableLiveData<String> mensaje;
     private Context context;
-    private Bitmap foto;
+    private byte [] foto;
     private ApiClient apiClient;
 
 
@@ -77,7 +78,8 @@ public class ViewModelRegistro extends AndroidViewModel {
             //Rutina para optimizar la foto,
             ByteArrayOutputStream baos=new ByteArrayOutputStream();
             imageBitmap.compress(Bitmap.CompressFormat.PNG,100, baos);
-            foto = imageBitmap;
+            foto = baos.toByteArray();
         }
     }
+
 }

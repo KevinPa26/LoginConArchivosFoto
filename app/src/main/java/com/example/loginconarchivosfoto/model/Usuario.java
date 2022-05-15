@@ -12,7 +12,7 @@ public class Usuario implements Serializable {
     private String password;
     private byte [] b;
 
-    public Usuario(long dni, String apellido, String nombre, String mail, String password, Bitmap imagenBit) {
+    public Usuario(long dni, String apellido, String nombre, String mail, String password, byte [] imagenBit) {
         this.dni = dni;
         this.apellido = apellido;
         this.nombre = nombre;
@@ -63,11 +63,11 @@ public class Usuario implements Serializable {
         this.password = password;
     }
 
-    public Bitmap getImagenBit() {
-        return imagenBit;
+    public byte[] getB() {
+        return b;
     }
 
-    public void setImagenBit(Bitmap imagenBit) {
-        this.imagenBit = imagenBit;
+    public void setB(byte[] b) {
+        this.b = b;
     }
 }

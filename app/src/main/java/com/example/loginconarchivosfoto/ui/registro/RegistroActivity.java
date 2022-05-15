@@ -62,7 +62,7 @@ public class RegistroActivity extends AppCompatActivity {
                 nombre.setText(usuario.getNombre());
                 email.setText(usuario.getMail());
                 password.setText(usuario.getPassword());
-                ivFoto.setImageBitmap(usuario.getImagenBit());
+                ivFoto.setImageBitmap(BitmapFactory.decodeByteArray(usuario.getB(),0,usuario.getB().length));
             }
         });
 
